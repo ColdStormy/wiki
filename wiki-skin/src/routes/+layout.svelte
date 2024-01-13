@@ -20,29 +20,30 @@
     .body
         background-color: $col_04
         box-shadow: 0 0 1px rgba(0,0,0, .25)
+        border-radius: 2px
+        padding: 0
 
         width: 80%
         margin: 20px auto
 
-    .sidebar
-        float: right
-        
-        
     .content
+        padding: 10px 20px
         
 
 
 </style>
 
 
-<div class="body">
-    <div class="content">
-        <slot />
-    </div>
-    <div class="sidebar">
-        <nav>
-            <a href="/">home</a>
-        </nav>
+<div class="body container">
+    <div class="columns col-gapless">
+        <div class="content column col-8">
+            <slot />
+        </div>
+        <div class="sidebar column col-4">
+            <nav>
+                <a href="/">home</a>
+            </nav>
+        </div>
     </div>
     
     
