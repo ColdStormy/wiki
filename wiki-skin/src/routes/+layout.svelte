@@ -17,18 +17,34 @@
         a
             color: $col_04
 
-    #content
+    .body
         background-color: $col_04
         box-shadow: 0 0 1px rgba(0,0,0, .25)
-        margin: 20px
+
+        width: 80%
+        margin: 20px auto
+
+    .sidebar
+        float: right
+        
+        
+    .content
+        
+
 
 </style>
 
 
-<div id="content">
-    <nav>
-        <a href="/">home</a>
-    </nav>
+<div class="body">
+    <div class="content">
+        <slot />
+    </div>
+    <div class="sidebar">
+        <nav>
+            <a href="/">home</a>
+        </nav>
+    </div>
     
-    <slot />
+    
+    
 </div>
